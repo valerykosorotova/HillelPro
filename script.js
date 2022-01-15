@@ -1,0 +1,6 @@
+console.log("Hello world")
+console.assert()
+console.error()
+console.debug()
+console.clear()
+console.log("Hello world")
