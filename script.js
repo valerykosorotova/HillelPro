@@ -1,48 +1,95 @@
-// Name
-const userName = prompt("What is your name?")
-console.log(userName);
+// 1. Two options to find out which number is bigger:
 
-// Year
-const userYear = prompt("What is your year of birth?")
-console.log(userYear);
+let a = 200;
+let b = 120;
+let c = a>b;
+console.log ("a is bigger -", Boolean(c));
 
-// Age
-const userAge = 2022-userYear;
-alert (userName + userAge);
+let x = 10;
+let y = 120;
 
-// Three variable
-let a = "1";
-let b = "2";
-let c = "3";
+if(x>y){
+    console.log("x is bigger");
+}else{
+    console.log("y is bigger");
+}
 
-// Type coercion 
-let numberA = Number(a);
-let numberB = Number(b);
-let numberC = Number(c);
+// 2. Is the number even? Two options:
 
-console.log(a,b,c);
-console.log(typeof a,typeof b,typeof c);
+let number = 12334;
+let lastDigit = number%10;
+if(number % 2 ===0){
+    console.log("NUMBER IS EVEN,", "LAST DIGIT = ", lastDigit);
+}else{
+    console.log("NUMBER IS NOT EVEN,", "LAST DIGIT = ", lastDigit);
+}
 
-console.log(numberA,numberB,numberC);
-console.log(typeof numberA,typeof numberB,typeof numberC);
+let secondNumber = 12335;
+let secondLastDigit = secondNumber%10;
+const check = secondNumber % 2 === 0 ? console.log("NUMBER IS EVEN","LAST DIGIT = ", secondLastDigit) : console.log("NUMBER IS NOT EVEN","LAST DIGIT = ", secondLastDigit);
 
-// Variables addition 
-console.log(numberA+numberB+numberC);
+// 3. Script
 
-// Even variables devide by 2 exactly (without remainder)
-console.log(numberA%2);
-console.log(numberB%2);
-console.log(numberC%2);
+let userName = prompt("Ваше имя?");
+let userAge = prompt("Ваш возраст?");
+let question = confirm("Упортебляете ли Вы алкоголь?");
 
-// Arithmetic mean
-console.log((numberA+numberB+numberC)/3);
+// if (question === true & userAge >= 40){
+//     console.log(userName, "Не злоупотребляйте");
+// }
+// if (question === true & userAge < 18){
+//     console.log(userName, "Ты что?! Маме расскажу!");
+// }
+// if (question === true & userAge >= 18 & userAge < 40){
+//     console.log(userName, "Только водку с пивом не мешай...");
+// }
+// if (question === false){
+//     console.log(userName, "Так держать!");
+// }
 
 
-// Split into individual digits 
-let number = 76895;
-let fifth = number%10;
-let fourth = ((number-fifth)/10)%10;
-let third = ((((number-fifth)/10)-fourth)/10)%10;
-let second = ((((((number-fifth)/10)-fourth)/10)-third)/10)%10;
-let first = ((((((((number-fifth)/10)-fourth)/10)-third)/10)-second)/10)%10;
-console.log(first, second, third, fourth, fifth)
+
+
+if (question === true && Number.isNaN(userAge) === false && userAge >= 40){
+    console.log(userName, "Не злоупотребляйте");
+}
+else if (question === true && Number.isNaN(userAge) === false && userAge < 18 && userAge > 0){
+    console.log(userName, "Ты что?! Маме расскажу!");
+}
+else if (question === true && Number.isNaN(userAge) === false && userAge >= 18 || userAge < 40 && userAge > 0){
+    console.log(userName, "Только водку с пивом не мешай...");
+}
+else if (question === false &&Number.isNaN(userAge) === false && userAge > 0){
+    console.log(userName, "Так держать!");
+}
+else{
+    console.log("Undefined")
+}
+
+
+// & String(userName) === true
+// Number.isNaN(userAge) === false
+
+// if (typeof(userName) !== String || typeof(userAge) !== Number){
+//     console.log("Undefined")
+// }
+// else{
+// //     console.log("Undefined")
+// // }
+
+// if (question === true & userAge >= 40 & userName === true){
+//     console.log(userName, "Не злоупотребляйте")
+// }
+// if (question === true & userAge < 18 & userName === true){
+//     console.log(userName, "Ты что?! Маме расскажу!")
+// }
+// if (question === true & userAge >= 18 & userAge < 40 & userName === true){
+//     console.log(userName, "Только водку с пивом не мешай...")
+// }
+// if (question === false & userAge === true & userName === true){
+//     console.log(userName, "Так держать!")}
+// }else{
+//     console.log("Undefined")
+// }
+
+// && userName === false & userAge === false
