@@ -34,62 +34,21 @@ let userName = prompt("Ваше имя?");
 let userAge = prompt("Ваш возраст?");
 let question = confirm("Упортебляете ли Вы алкоголь?");
 
-// if (question === true & userAge >= 40){
-//     console.log(userName, "Не злоупотребляйте");
-// }
-// if (question === true & userAge < 18){
-//     console.log(userName, "Ты что?! Маме расскажу!");
-// }
-// if (question === true & userAge >= 18 & userAge < 40){
-//     console.log(userName, "Только водку с пивом не мешай...");
-// }
-// if (question === false){
-//     console.log(userName, "Так держать!");
-// }
 
-
-
-
-if (question === true && Number.isNaN(userAge) === false && userAge >= 40){
+if (question === true && Number.isNaN(userAge) === false && userAge >= 40 && userName != null){
     console.log(userName, "Не злоупотребляйте");
 }
-else if (question === true && Number.isNaN(userAge) === false && userAge < 18 && userAge > 0){
+else if (question === true && Number.isNaN(userAge) === false && userAge < 18 && userAge > 0 && userName != null){
     console.log(userName, "Ты что?! Маме расскажу!");
 }
-else if (question === true && Number.isNaN(userAge) === false && userAge >= 18 || userAge < 40 && userAge > 0){
+else if (question === true && Number.isNaN(userAge) === false && userAge >= 18 && userAge < 40 && userAge > 0 && userName != null){
     console.log(userName, "Только водку с пивом не мешай...");
 }
-else if (question === false &&Number.isNaN(userAge) === false && userAge > 0){
+else if (question === false &&Number.isNaN(userAge) === false && userAge > 0 && userName != null){
     console.log(userName, "Так держать!");
 }
 else{
-    console.log("Undefined")
+    console.log("Undefined result")
 }
 
 
-// & String(userName) === true
-// Number.isNaN(userAge) === false
-
-// if (typeof(userName) !== String || typeof(userAge) !== Number){
-//     console.log("Undefined")
-// }
-// else{
-// //     console.log("Undefined")
-// // }
-
-// if (question === true & userAge >= 40 & userName === true){
-//     console.log(userName, "Не злоупотребляйте")
-// }
-// if (question === true & userAge < 18 & userName === true){
-//     console.log(userName, "Ты что?! Маме расскажу!")
-// }
-// if (question === true & userAge >= 18 & userAge < 40 & userName === true){
-//     console.log(userName, "Только водку с пивом не мешай...")
-// }
-// if (question === false & userAge === true & userName === true){
-//     console.log(userName, "Так держать!")}
-// }else{
-//     console.log("Undefined")
-// }
-
-// && userName === false & userAge === false
